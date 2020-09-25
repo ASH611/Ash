@@ -36,9 +36,16 @@ class SlingShot{
             line(pointA.x+20, pointA.y, pointB.x+20, pointB.y);
             image(this.sling3, pointA.x-30,pointA.y-10,15,30)
             
-            pop();
             
         }
+        else{
+            World.remove(world, this.body);
+            push();
+            this.Visiblity = this.Visiblity - 5;
+            tint(255,this.Visiblity);
+            image(this.sling1, this.body.position.x, this.body.position.y, 50, 50);
+            pop();
+          }
     }
     
 }
